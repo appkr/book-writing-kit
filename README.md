@@ -17,7 +17,8 @@ $ git clone https://github.com/appkr/book-writing-kit.git my-book
 이 스타트 킷은 아래 도구들과 함께 동작한다(Mac 운영체제 기준).
 
 ```sh
-$ npm install gitbook-cli -g
+$ npm install gitbook-cli --global
+$ npm install svgexport --global
 $ brew install Caskroom/cask/calibre
 $ brew install pandoc
 ```
@@ -31,6 +32,7 @@ $ brew install pandoc
 
 -   [Chapter 1](_draft/chapter1.md)
 -   [Chapter 2](_draft/chapter2.md)
+-   [Chapter 3](_draft/chapter3.md)
 -   ...
 ```
 
@@ -42,11 +44,19 @@ pandoc --verbose --smart --reference-docx=reference.docx --output=../_build/my-b
     ../SUMMARY.md \
     chapter1.md \
     chapter2.md \
+    chapter3.md \
     ...
 ;;
 ```
 
 ## 4. 전자책 출판
+
+처음 한 번은 Gitbook 플러그인을 설치해야 한다.
+
+```sh
+$ cd my-book
+$ gitbook install
+```
 
 아래 명령으로 출판한다. 출판된 파일은 `_build` 디렉터리에서 찾을 수 있다.
 

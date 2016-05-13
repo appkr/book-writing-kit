@@ -1,0 +1,21 @@
+{
+  "pdf": {
+    "fontSize": 10
+  },
+  "plugins": [
+    "anchors",
+    "include-highlight",
+    "mathjax-beta",
+    "richquotes",
+    "toc",
+    "expandable-chapters"
+  ],
+  "pluginsConfig": {
+    "mathjax": {
+      "forceSVG": true
+    },
+    "ga": {
+      "token": "UA-XXXXXXXX-1"
+    }
+  }
+}

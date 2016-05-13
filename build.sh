@@ -15,11 +15,12 @@ case ${1} in
   "docx")
     cd _draft;
 
-    pandoc --verbose --smart --reference-docx=reference.docx --output=../_build/my-book.docx\
+    pandoc --verbose --smart --mathjax --reference-docx=reference.docx --output=../_build/my-book.docx\
         ../README.md \
         ../SUMMARY.md \
         chapter1.md \
-        chapter2.md
+        chapter2.md \
+        chapter3.md
     ;;
 
   *)
